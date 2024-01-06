@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.switchscene.ControllerSceneIntermedia">
+    <children>
+        <Label fx:id="NamedesSpielers" layoutX="289.0" layoutY="119.0" prefHeight="21.0" prefWidth="157.0" />
+        <Line endX="284.0" endY="43.0" layoutX="150.0" layoutY="97.0" startX="133.0" startY="43.0" />
+        <Label fx:id="Loesungswort" layoutX="300.0" layoutY="229.0" prefHeight="21.0" prefWidth="157.0" />
+        <Label layoutX="301.0" layoutY="150.0" text="Name des Spieler" textFill="#47f70c" />
+        <Label layoutX="140.0" layoutY="119.0" text="Congratulation" />
+        <Label layoutX="140.0" layoutY="229.0" text="The right Word is :" />
+        <Line endX="544.5" endY="68.5" layoutX="-127.0" layoutY="181.0" startX="427.5" startY="68.5" />
+    </children>
+</AnchorPane>
