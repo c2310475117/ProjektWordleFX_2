@@ -23,7 +23,7 @@
       <Label fx:id="Loesungswort" layoutX="261.0" layoutY="123.0" prefHeight="21.0" prefWidth="123.0" />
       <Label fx:id="Feedback" layoutX="117.0" layoutY="190.0" prefHeight="21.0" prefWidth="123.0" />
       <Label fx:id="Beurteilung" layoutX="211.0" layoutY="300.0" prefHeight="21.0" prefWidth="157.0" />
-      <Label fx:id="timeLabel" layoutX="261.0" layoutY="43.0" prefHeight="21.0" prefWidth="123.0" />
       <Label fx:id="NamedesSpielers" layoutX="326.0" layoutY="190.0" prefHeight="21.0" prefWidth="157.0" />
+      <Label fx:id="TimeLable" layoutX="261.0" layoutY="43.0" prefHeight="21.0" prefWidth="123.0" />
     </children>
 </AnchorPane>

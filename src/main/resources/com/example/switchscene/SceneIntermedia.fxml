@@ -11,10 +11,13 @@
         <Label layoutX="428.0" layoutY="42.0" prefHeight="21.0" prefWidth="123.0" />
         <Line endX="284.0" endY="43.0" layoutX="97.0" layoutY="19.0" startX="133.0" startY="43.0" />
       <Label layoutX="248.0" layoutY="72.0" text="Name des Spieler" textFill="#47f70c" />
-      <Label layoutX="226.0" layoutY="190.0" text="Spielfeld von Benedikt" textFill="#47f70c" />
-      <Label layoutX="243.0" layoutY="258.0" text="Tastatur von Fabio" textFill="#47f70c" />
+      <Label layoutX="226.0" layoutY="209.0" text="Spielfeld von Benedikt" textFill="#47f70c" />
+      <Label layoutX="239.0" layoutY="287.0" text="Tastatur von Fabio" textFill="#47f70c" />
         <Label fx:id="NamedesSpielers" layoutX="228.0" layoutY="42.0" prefHeight="21.0" prefWidth="157.0" />
         <Button layoutY="308.0" mnemonicParsing="false" onAction="#switchToSceneFinnishIntermedia" text="Finnsish" />
-      <Label layoutX="219.0" layoutY="121.0" text="Gib das Eingabewort ein" />
+      <Label layoutX="97.0" layoutY="115.0" text="Gib das Eingabewort mit  " />
+      <Label fx:id="Wortlange" layoutX="283.0" layoutY="115.0" prefHeight="21.0" prefWidth="41.0" />
+      <Line endX="472.0" endY="69.0" layoutX="-148.0" layoutY="67.0" startX="427.5" startY="68.5" />
+      <Label layoutX="346.0" layoutY="115.0" text="Buchstaben ein !" />
     </children>
 </AnchorPane>

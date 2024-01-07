@@ -8,7 +8,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -22,26 +21,39 @@ public class ControllerSceneIntermedia {
 
     @FXML
     private Label NamedesSpielers;
+    @FXML
+    private Label Loesungswort;
+    private GameManagerSingleton gameManager;
+
+    @FXML
+    private Label Wortlange;
+
 
     public void initialize() {
-        String username = GameManager.getInstance().getUsername();
-        NamedesSpielers.setText(username.toUpperCase()); // der username
-    }
+        gameManager = GameManagerSingleton.getGaMaSi();
 
-    public void displayName(String username) {
-        NamedesSpielers.setText(username.toUpperCase());
+        String username = gameManager.getUsername();
+        NamedesSpielers.setText(username.toUpperCase()); // der username
+
+        String solutionWord = gameManager.getSolutionWord();
+        Loesungswort.setText(solutionWord);
+
+        int lenght = gameManager.getWordLength();
+        Wortlange.setText(String.valueOf(lenght)); // wandelt int in String um
     }
 
     public void switchToSceneFinnishIntermedia(ActionEvent event) throws IOException {
 
-        String username = NamedesSpielers.getText();
+        String username = GameManagerSingleton.getGaMaSi().getUsername();
+        String solutionWord = GameManagerSingleton.getGaMaSi().getSolutionWord();
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SceneFinnishIntermedia.fxml"));
         root = loader.load();
 
         // Verwende den ControllerSceneAdvanced für SceneFinnishAdvanced
         ControllerSceneIntermedia sceneIntermedia = loader.getController();
-        sceneIntermedia.displayName(username);
+        sceneIntermedia.NamedesSpielers.setText(username.toUpperCase());
+        sceneIntermedia.Loesungswort.setText(solutionWord);
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

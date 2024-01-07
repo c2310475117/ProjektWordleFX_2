@@ -7,6 +7,7 @@ import java.nio.file.Paths;
 import java.util.*;
 
 public class WordManager {
+
     private int wordLength;
     String SolutionWord;
     List<String>filteredList;
@@ -33,9 +34,11 @@ public class WordManager {
 
         Random random = new Random();
 
-        return filteredList.get(random.nextInt(filteredList.size()));
+        SolutionWord = filteredList.get(random.nextInt(filteredList.size()));
 
+        return SolutionWord;
     }
+
     public List<String> generateWordList(int wordLength) { // getWordlistbylenght || filterwordsbylength
 
         List<String> filteredList = new LinkedList<>();

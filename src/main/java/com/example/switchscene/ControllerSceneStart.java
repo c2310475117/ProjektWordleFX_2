@@ -11,7 +11,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Optional;
 
 public class ControllerSceneStart {
 
@@ -21,33 +20,23 @@ public class ControllerSceneStart {
     private Scene scene;
     private Parent root;
 
-    public TextField WordLengthField;
+    int lenght;
 
     @FXML
-    public Label Loesungswort;
-
-    public void Loesungswort() {
-        Loesungswort.setText("Eingabe");
-    }
-
-    public double Timer() {
-        return 0;
-    }
-
+    public TextField EingabeWortLange;
 
     public void switchToSceneIntermedia(ActionEvent event) throws IOException {
 
-        String username = EingabeSpielerName.getText(); //speichert den Input aus get.Text in einer Variable um diese weiterzuverarbeiten
+        String username = EingabeSpielerName.getText(); //
         // System.out.println("username :" + username); // Test ob etwas gespeichert wurde
 
-        GameManager gameManager = GameManager.getInstance(); // Game Manger wird initialisiert
-        gameManager.setUsername(username); // username wird im GameManager gespeichert
+
+        GameManagerSingleton gameManager = GameManagerSingleton.getGaMaSi();
+        gameManager.setUsername(username);
+        gameManager.setWordLength(lenght);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SceneIntermedia.fxml")); // Erstellt ein FXMLloader Objekt und weist ihm die Ressource zu
         root = loader.load(); // root ist der Rückgabewert
-
-        ControllerSceneIntermedia sceneIntermedia = loader.getController(); // Erstellt eine Instance der ControllerSceneIntermedia
-        sceneIntermedia.displayName(username); // ruft die Methode displayName (aus der Classe ControllerSceneIntermedia) auf, und übergibt ihm den usernamen
 
         // root = FXMLLoader.load(getClass().getResource("SceneIntermedia.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -62,14 +51,11 @@ public class ControllerSceneStart {
         String username = EingabeSpielerName.getText(); //speichert den Input aus get.Text in einer Variable um diese weiterzuverarbeiten
         // System.out.println("username :" + username); // Test ob etwas gespeichert wurde
 
-        GameManager gameManager = GameManager.getInstance();
-        gameManager.setUsername(username);
+        GameManagerSingleton gameManager = GameManagerSingleton.getGaMaSi(); // die EINZIGE GameMangerSingleton Instanz wird aufgerufen
+        gameManager.setUsername(username); // username wird im GameMangerSingelton Objekt (gameManger) gespeichert
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SceneAdvanced.fxml")); // Erstellt ein FXMLloader Objekt und weist ihm die Ressource zu
         root = loader.load(); // root ist der Rückgabewert
-
-        ControllerSceneAdvanced sceneAdvanced = loader.getController(); // Erstellt eine Instance der ControllerSceneIntermedia
-        sceneAdvanced.displayName(username); // ruft die Methode displayName (aus der Classe ControllerSceneIntermedia) auf, und übergibt ihm den usernamen
 
         // root = FXMLLoader.load(getClass().getResource("SceneIntermedia.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

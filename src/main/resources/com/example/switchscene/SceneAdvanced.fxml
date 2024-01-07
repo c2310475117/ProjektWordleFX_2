@@ -10,13 +10,17 @@
       <Label fx:id="NamedesSpielers" layoutX="117.0" layoutY="42.0" prefHeight="21.0" prefWidth="157.0" />
       <Label layoutX="53.0" layoutY="42.0" text="Hallo" />
       <Label layoutX="364.0" layoutY="42.0" text="Timer:" />
-      <Label fx:id="timeLabel" layoutX="428.0" layoutY="42.0" prefHeight="21.0" prefWidth="123.0" />
       <Line endX="284.0" endY="43.0" layoutX="-14.0" layoutY="20.0" startX="133.0" startY="43.0" />
       <Line endX="544.5" endY="68.5" layoutX="4.0" layoutY="-5.0" startX="427.5" startY="68.5" />
       <Label layoutX="137.0" layoutY="77.0" text="Name des Spieler" textFill="#47f70c" />
-      <Label layoutX="236.0" layoutY="161.0" text="Spielfeld von Benedikt" textFill="#47f70c" />
-      <Label layoutX="253.0" layoutY="268.0" text="Tastatur von Fabioi" textFill="#47f70c" />
-      <Label layoutX="229.0" layoutY="131.0" text="Gib das Eingabewort ein" />
+      <Label layoutX="202.0" layoutY="257.0" text="Spielfeld von Benedikt" textFill="#47f70c" />
+      <Label layoutX="208.0" layoutY="339.0" text="Tastatur von Fabioi" textFill="#47f70c" />
+      <Label layoutX="71.0" layoutY="131.0" text="Gib das Eingabewort mit  " />
       <Button layoutX="10.0" layoutY="318.0" mnemonicParsing="false" onAction="#switchToSceneFinnishAdvanced" text="Finnsish" />
+      <Label fx:id="TimeLable" layoutX="428.0" layoutY="42.0" prefHeight="21.0" prefWidth="123.0" />
+      <Label fx:id="Wortlange" layoutX="257.0" layoutY="131.0" prefHeight="21.0" prefWidth="41.0" />
+      <Line endX="472.0" endY="69.0" layoutX="-174.0" layoutY="83.0" startX="427.5" startY="68.5" />
+      <Label layoutX="241.0" layoutY="165.0" text="Wortlänge" textFill="#47f70c" />
+      <Label layoutX="320.0" layoutY="131.0" text="Buchstaben ein !" />
    </children>
 </AnchorPane>

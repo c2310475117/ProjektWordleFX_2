@@ -1,7 +1,6 @@
 package com.example.switchscene;
 
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 public class MainJAVA {
     public static void main(String[] args) throws InterruptedException {
@@ -18,13 +17,14 @@ public class MainJAVA {
         wm.generateWordList(length);
         String loesung = wm.getSolutionWord();
 
-        TimerManager tm = new TimerManager(bm);
+        GameManagerSingleton gm = GameManagerSingleton.getGaMaSi();
+        TimeManager tm = new TimeManager(bm, gm);
         tm.startTimer();
 
         System.out.println(loesung);//Für Debugging
         // bm.startGame(); // Timer starten
         for (int i=0; i<6;i++) {
-            TimeUnit.SECONDS.sleep(1);
+            // TimeUnit.SECONDS.sleep(1);
             System.out.print("Geben Sie das Eingabewort ein: ");
 
             String eingabe = scanner.next();

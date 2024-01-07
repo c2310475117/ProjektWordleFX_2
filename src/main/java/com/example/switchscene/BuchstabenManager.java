@@ -1,26 +1,17 @@
 package com.example.switchscene;
 
-import java.util.Arrays;
-
 public class BuchstabenManager {
+    private TimeManager timerManager;
+
     public WordManager getWm() {
         return wm;
     }
     WordManager wm = new WordManager();
     StringBuilder let =new StringBuilder();
 
-    public TimerManager timerManager;
-    public BuchstabenManager(){
-        timerManager = new TimerManager(this);
-
-    }
-    public void startGame() {
-        timerManager.startTimer();
-    }
-
     public void handleTimeUp() {
         System.out.println("Time's up!");
-        // Hier kannst du weitere Aktionen ausführen, wenn die Zeit abgelaufen ist.
+        // Was passiert wenn die Zeit abgelaufen ist ?
     }
 
     public String anzeigeFarbausgabeneu (int[]anzeigeArray,String eingabe) {
@@ -138,20 +129,9 @@ public class BuchstabenManager {
             }
         }
 
-
-
-
         return anzeigeFarbausgabeneu(anzeigeArray,eingabe);
 
-
-
     }
-
-
-
-
-
-
 
     public int countLetter(String letter, String loesung){
         int count=0;
